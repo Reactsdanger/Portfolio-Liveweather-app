@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import React from 'react'
 import { fredoka } from './MainPage';
+import { Unbounded } from 'next/font/google';
+
+ export const danfo = Unbounded({
+   variable: "--font-danfo",
+   subsets: ["latin"],
+   weight: ["400"],
+ });
 
 const Header = () => {
   return (
@@ -8,8 +15,14 @@ const Header = () => {
       className="bg-gray-800 w-full sticky h-12 first-line:top-0 flex items-center justify-around"
       style={{ fontFamily: fredoka.style.fontFamily }}
     >
-      <Link href="/">Live Weather</Link>
-      <Link href="/howtouse">how to use</Link>
+      <Link
+        href="/"
+        className="text-blue-200"
+        style={{ fontFamily: danfo.style.fontFamily }}
+      >
+       <strong className='text-xl'>🌩️</strong> Live Weather 
+      </Link>
+      <Link href="/howtouse">How to use</Link>
       <Link href="/credits">Credits</Link>
       <Link href="addcountryforecast">
         <svg

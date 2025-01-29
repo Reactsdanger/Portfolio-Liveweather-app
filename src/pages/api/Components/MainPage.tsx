@@ -6,7 +6,7 @@ import { RootState } from "../ReduxMain/ReduxStore";
 import { Degree, Direction, Temperature, Wind } from "../SVG/svgs";
 import { Fredoka } from "next/font/google";
 import { CircularProgress } from "@mui/material";
- 
+
   export const fredoka = Fredoka({
     variable: "--font-fredoka",
     subsets: ["hebrew"],
